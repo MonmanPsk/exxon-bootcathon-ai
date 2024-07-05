@@ -73,7 +73,7 @@ if "messages" not in st.session_state:
         ]
 
         # GPT Model Option: gpt35turbo_model, gpt4turbo_model and gpt4o_model
-        response = get_chat_completion(messages, gpt4o_model)
+        response = get_chat_completion(messages, gpt35turbo_model)
         st.markdown(response)
 else:
     with st.chat_message("assistant"):
@@ -116,7 +116,7 @@ if prompt := st.chat_input():
     print(input_prompt_message)
     
     # GPT Model Option: gpt35turbo_model, gpt4turbo_model and gpt4o_model
-    response = get_chat_completion(input_prompt_message, gpt4o_model)
+    response = get_chat_completion(input_prompt_message, gpt35turbo_model)
     
     st.session_state.messages.append({"role": "assistant", "content": response})
 
